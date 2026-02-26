@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 2rem 6.4rem;
+}
+
+.main--header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.main--nav--list {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+
+.main--nav--list a:link,
+.main--nav--list a:visited {
+  color: hsl(273, 4%, 51%);
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+
+  transition: all 0.3s;
+}
+
+.main--nav--list a:hover,
+.main--nav--list a:active {
+  color: hsl(270, 9%, 17%);
+}
+
+.cta--btn {
+  border: 2px solid hsl(270, 9%, 17%);
+  padding: 1.4rem 3.5rem;
+}
+
+.main--nav--list .cta--btn:hover {
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(270, 9%, 17%);
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+  border: 2px solid hsl(270, 9%, 17%);
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* HERO */
+
+.hero {
+  background-color: hsl(256, 26%, 20%);
+  position: relative;
+}
+
+.hero--c {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  gap: 5rem;
+  align-items: start;
+  overflow: visible;
+
+  z-index: 5;
+}
+
+.primary--heading {
+  font-family: "DM Serif Display", serif;
+  color: hsl(0, 100%, 100%);
+  font-size: 7rem;
+  font-weight: 600;
+}
+
+.line {
+  width: 15rem;
+  height: 0.05rem;
+
+  background-color: hsl(0, 100%, 100%);
+}
+
+.hero--p {
+  color: hsl(0, 100%, 100%);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 6rem;
+}
+
+.hero--btn {
+  list-style: none;
+}
+
+.hero--btns:link,
+.hero--btns:visited {
+  border: 2px solid hsl(0, 100%, 100%);
+  padding: 1.4rem 3.5rem;
+  text-decoration: none;
+  color: hsl(0, 100%, 100%);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+
+  transition: all 0.3s;
+
+  z-index: 9999;
+}
+
+.hero--btns:hover,
+.hero--btns:active {
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(270, 9%, 17%);
+}
+
+.hero--img--box {
+  margin-bottom: -35vh;
+  z-index: 10;
+  grid-column: 2 / 4;
+}
+
+.hero--img--box img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20rem;
+
+  width: 80rem;
+
+  background-image: url("/images/bg-pattern-intro-right-desktop.svg");
+  background-repeat: no-repeat;
+
+  background-position: center -12rem;
+
+  pointer-events: none;
+  z-index: 100;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom: -42rem;
+  left: -4rem;
+
+  width: 60rem;
+  height: 100%;
+  background-image: url("/images/bg-pattern-intro-left-desktop.svg");
+  background-repeat: no-repeat;
+
+  background-position: left bottom;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* WHAT FOR */
+
+.what--for {
+  padding-top: 35rem;
+}
+
+.line--what--for {
+  background-color: hsl(270, 9%, 17%, 0.5);
+}
+
+.secondary--heading {
+  font-size: 6rem;
+  font-weight: 600;
+  margin-bottom: 10rem;
+  color: hsl(270, 9%, 17%);
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 0.1rem;
+}
+
+.text--box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  align-items: center;
+}
+
+.tertiary--heading {
+  font-family: "DM Serif Display", serif;
+
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: hsl(270, 9%, 17%);
+}
+
+.tertiary--p {
+  color: hsl(270, 9%, 17%);
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* ABOUT */
+
+.about--c {
+  background-color: hsl(256, 26%, 20%);
+
+  width: 90%;
+
+  margin-top: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 0 10rem;
+  position: relative;
+
+  z-index: 10;
+  overflow: hidden;
+}
+
+.heading--c {
+  font-size: 5.5rem;
+  font-weight: 600;
+}
+
+.about--btn {
+  justify-self: end;
+}
+
+.about--c::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -57rem;
+
+  width: 100rem;
+  height: 100rem;
+
+  background-image: url("/images/bg-pattern-how-we-work-desktop.svg");
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 20rem;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.socials:hover img {
+  filter: brightness(0.3) contrast(1.2);
+}
+
+.line--social {
+  width: 100%;
+}
+
+.footer--link {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.footer-heading {
+  opacity: 0.5;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.footer--nav--link {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer--nav--links:link,
+.footer--nav--links:visited {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2rem;
+  color: hsl(270, 9%, 17%);
+  transition: all 0.3s;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.footer--nav--links:hover,
+.footer--nav--links:active {
+  text-decoration: underline;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  left: -10rem;
+
+  width: 100rem;
+  height: 100rem;
+
+  background-image: url("/images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
